@@ -7,7 +7,7 @@
       },
       "ecmaVersion": 2018,
       "sourceType": "module",
-      "project": "./events-app/tsconfig.json"
+      "project": "./tsconfig.json"
     },
     "extends": [
       "airbnb-typescript",
@@ -32,6 +32,7 @@
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
       "@typescript-eslint/camelcase": "off",
+      "no-shadow":"off",
       "prettier/prettier": [
         "error",
         {

@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './App.module.css'
+import style from './App.module.css';
 import Login from './components/Login';
 
 function App(): JSX.Element {

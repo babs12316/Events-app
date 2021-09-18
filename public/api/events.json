@@ -1,0 +1,100 @@
+{
+   "eventType":[
+      {
+         "id":1,
+         "name":"Cricket "
+      },
+      {
+         "id":2,
+         "name":"Football "
+      },
+      {
+         "id":3,
+         "name":"Cinema "
+      },
+      {
+         "id":4,
+         "name":"Gym "
+      }
+   ],
+   "event":[
+      {
+         "id":1,
+         "eventTypeId":1,
+         "userId":[
+            1,
+            2
+         ],
+      "name":"Test match at Frankfurt",
+         "description":"its a 5 days match!",
+         "start":"09 December 2020 08:00 UTC",
+         "end":"14 December 2020 18:00 UTC",
+         "status":false
+      },
+      {
+         "id":2,
+         "eventTypeId":2,
+         "userId":[
+            1,
+            2
+         ],
+      "name":"Eurocup match at Frankfurt",
+         "description":"its a 90 min match!",
+         "start":"01 January 2020 10:00 UTC",
+         "end":"01 January 2020 12:00 UTC",
+         "status":false
+      },
+      {
+         "id":3,
+         "eventTypeId":3,
+         "userId":[
+            1,
+            2
+         ],
+      "name":"SuperHero movie",
+         "description":"its a marvel movie!",
+         "start":"20 June 2020 16:00 UTC",
+         "end":"  20 June 2020 18:00 UTC",
+         "status":false
+      },
+      {
+         "id":4,
+         "eventTypeId":4,
+         "userId":[
+            1,
+            2
+         ],
+      "name":"Yoga session",
+         "description":"its a energy booster session!",
+         "start":"12 October 2020 08:00 UTC",
+         "end":"14 October 2020 18:00 UTC",
+         "status":false
+      }
+   ],
+
+  "user":[{
+          
+     "id":"john_1",
+      "name": "john",
+     "surName": "wick",
+      "email": "jj@ww.com",
+      "password": "test",
+       "role": "admin"
+
+   },
+
+  {
+          
+     "id":"james_2",
+      "name": "james",
+     "surName": "smith",
+      "email": "tt@tt.com",
+      "password": "test",
+       "role": "user"
+
+   }
+
+
+]
+
+}
