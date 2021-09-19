@@ -1,0 +1,20 @@
+.item1 { grid-area: aside; }
+.item2 { grid-area: main; }
+.adminContainer{
+    display:grid;
+    grid-template-areas:
+    'aside main main main';
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+.adminContainer > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+
+
+

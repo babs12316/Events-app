@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { FormControl, InputLabel, Input, FormHelperText, Button, Box } from '@mui/material';
 import { Redirect } from 'react-router';
-import { getUser } from '../services/eventsApi';
-import { LoginCredentials } from '../types/type';
+import { getUser } from '../../services/eventsApi';
+import { LoginCredentials } from '../../types/type';
+import style from './Login.module.css';
 
 const Login = (): JSX.Element => {
   const [loginData, setLoginData] = useState<LoginCredentials>({} as LoginCredentials);
@@ -11,13 +12,11 @@ const Login = (): JSX.Element => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(`submitted${JSON.stringify(loginData)}`);
     if (loginData.id) {
       getUser(loginData.id)
         .then((data) => {
           if (data) {
             if (data.password === loginData.password) {
-              console.log('its a valid user should redirect to dashboard page');
               setValidUser(true);
             }
           } else {
@@ -29,7 +28,8 @@ const Login = (): JSX.Element => {
   };
   return (
     <>
-      <form onSubmit={handleSubmit} aria-labelledby="login">
+      <form onSubmit={handleSubmit} aria-labelledby="login" className={style.login}>
+        <h1>Events app</h1>
         <h2 id="login">Login Form</h2>
         <Box sx={{ m: 2 }}>
           <FormControl>
@@ -69,7 +69,7 @@ const Login = (): JSX.Element => {
         {errorMsg && <FormHelperText sx={{ color: '#FF0000' }}>{errorMsg}</FormHelperText>}
         <FormHelperText id="my-helper-text">Valid user names are john_1 & james_2.</FormHelperText>
       </form>
-      {validUser && <Redirect to="/dashboard" push />};
+      {validUser && <Redirect to={`/dashboard/${loginData.id}`} />};
     </>
   );
 };

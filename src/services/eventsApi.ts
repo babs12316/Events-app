@@ -11,6 +11,8 @@ export const getUser = async (userId: string): Promise<User> => {
   return user;
 };
 
-export const getEvents = (): void => {
-  console.log('hello');
+export const getUserRole = async (userId: string): Promise<string> => {
+  const result = await axios.get<Events>(`${baseUrl}`);
+  const user = result.data.user.find((item: User) => item!.id === userId);
+  return user!.role;
 };
