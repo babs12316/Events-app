@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-cycle
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import AdminEventTypes from '../components/AdminEventTypes/AdminEventTypes';
+import AdminEventTypes from '../containers/AdminEventTypesContainer/AdminEventTypesContainer';
 import Dashboard from '../components/Dashboard/Dashboard';
 import Login from '../components/Login/Login';
 
