@@ -7,26 +7,10 @@ import MenuItem from '@mui/material/MenuItem';
 import ListItemText from '@mui/material/ListItemText';
 import { Link, useLocation, BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import style from './AdminContainer.module.css';
-import AdminEventTypes from '../../components/AdminEventTypes/AdminEventTypes';
+import { adminRoutes } from '../../routes/AdminRoutes';
 
 const AdminContainer = () => {
   const location = useLocation();
-  const adminRoutes = [
-    {
-      path: '/dashboard/:userId/event-types',
-      exact: true,
-      sidebar: () => <div>Hello</div>
-    },
-    {
-      path: '/dashboard/:userId/events',
-      sidebar: () => <div>EventsComponent</div>
-    },
-    {
-      path: '/dashboard/:userId/users',
-      sidebar: () => <div>UsersComponents</div>
-    }
-  ];
-
   return (
     <Router>
       <div className={style.adminContainer}>
@@ -57,7 +41,7 @@ const AdminContainer = () => {
         </div>
         <div className={style.item2}>
           <Switch>
-            {adminRoutes.map((route, index) => (
+            {adminRoutes.map((route) => (
               <Route key={route.path} path={route.path} exact={route.exact}>
                 <route.sidebar />
               </Route>
