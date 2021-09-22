@@ -2,15 +2,12 @@ import React, { useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
-import { useLocation } from 'react-router-dom';
 import { EventType, getEventTypes } from '../../services/eventsApi';
 import DisplayEventTypes from '../../components/AdminEventType/DisplayEventTypes';
 import AddEventType from '../../components/AdminEventType/AddEventType';
 
 const AdminEventTypesContainer = (): JSX.Element => {
   const [eventTypes, setEventTypes] = useState<EventType[]>([]);
-  const location = useLocation();
-
   const handleDeleteEventType = (eventTypeId: number) => {
     const newEventTypes = eventTypes.filter((eventType) => eventType.id !== eventTypeId);
     setEventTypes(newEventTypes);
