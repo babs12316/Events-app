@@ -4,7 +4,8 @@ import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import { useLocation } from 'react-router-dom';
 import { EventType, getEventTypes } from '../../services/eventsApi';
-import AdminEventType from '../../components/AdminEventType/AdminEventType';
+import DisplayEventTypes from '../../components/AdminEventType/DisplayEventTypes';
+import AddEventType from '../../components/AdminEventType/AddEventType';
 
 const AdminEventTypesContainer = (): JSX.Element => {
   const [eventTypes, setEventTypes] = useState<EventType[]>([]);
@@ -12,6 +13,11 @@ const AdminEventTypesContainer = (): JSX.Element => {
 
   const handleDeleteEventType = (eventTypeId: number) => {
     const newEventTypes = eventTypes.filter((eventType) => eventType.id !== eventTypeId);
+    setEventTypes(newEventTypes);
+  };
+
+  const handleAddEventType = (eventType: string) => {
+    const newEventTypes = [...eventTypes, { id: Math.floor(Math.random() * 100), name: eventType }];
     setEventTypes(newEventTypes);
   };
 
@@ -24,18 +30,17 @@ const AdminEventTypesContainer = (): JSX.Element => {
   return (
     <div>
       <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
-        <nav aria-label="main mailbox folders">
-          <List>
-            {eventTypes &&
-              eventTypes.map((eventType, index) => (
-                <AdminEventType
-                  key={eventType.id}
-                  eventType={eventType}
-                  onDeleteEventType={handleDeleteEventType}
-                />
-              ))}
-          </List>
-        </nav>
+        <AddEventType onAddEventType={handleAddEventType} />
+        <List>
+          {eventTypes &&
+            eventTypes.map((eventType) => (
+              <DisplayEventTypes
+                key={eventType.id}
+                eventType={eventType}
+                onDeleteEventType={handleDeleteEventType}
+              />
+            ))}
+        </List>
         <Divider />
       </Box>
     </div>

@@ -9,7 +9,7 @@ type AdminEventTypeProps = {
   onDeleteEventType: (id: number) => void;
 };
 
-const AdminEventType = ({ eventType, onDeleteEventType }: AdminEventTypeProps): JSX.Element => {
+const DisplayEventType = ({ eventType, onDeleteEventType }: AdminEventTypeProps): JSX.Element => {
   const handleDelete = (eventTypeId: number) => {
     onDeleteEventType(eventTypeId);
   };
@@ -29,4 +29,4 @@ const AdminEventType = ({ eventType, onDeleteEventType }: AdminEventTypeProps): 
   );
 };
 
-export default AdminEventType;
+export default DisplayEventType;

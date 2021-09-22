@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-cycle
 import React from 'react';
 import Divider from '@mui/material/Divider';
 import Paper from '@mui/material/Paper';
@@ -19,7 +18,7 @@ const AdminContainer = () => {
             <MenuList>
               <MenuItem sx={{ m: 2 }}>
                 <ListItemText>
-                  <Link to={`${location.pathname}/event-types`}>Event types</Link>
+                  <Link to={`${location.pathname}`}>Event types</Link>
                 </ListItemText>
               </MenuItem>
               <Divider />
