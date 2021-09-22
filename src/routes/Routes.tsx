@@ -10,7 +10,7 @@ export const Routes = (): JSX.Element => (
     <Route path="/" exact>
       <Login />
     </Route>
-    <Route path="/dashboard/:userId" exact>
+    <Route path="/dashboard/:userId/event-types" exact>
       <Dashboard />
     </Route>
   </Switch>

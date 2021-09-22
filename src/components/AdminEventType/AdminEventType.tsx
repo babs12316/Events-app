@@ -1,34 +1,27 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Input, InputAdornment, ListItem } from '@mui/material';
-import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { EventType } from '../../services/eventsApi';
 
 type AdminEventTypeProps = {
   eventType: EventType;
+  onDeleteEventType: (id: number) => void;
 };
 
-const AdminEventType = ({ eventType }: AdminEventTypeProps): JSX.Element => {
-  const location = useLocation();
-  const [editedName, setEditedName] = useState<string>();
+const AdminEventType = ({ eventType, onDeleteEventType }: AdminEventTypeProps): JSX.Element => {
+  const handleDelete = (eventTypeId: number) => {
+    onDeleteEventType(eventTypeId);
+  };
   return (
     <div>
-      <ListItem key={eventType.id} disablePadding>
+      <ListItem key={eventType.id}>
         <Input
           defaultValue={eventType.name}
-          onChange={(e) => setEditedName(e.target.value)}
           endAdornment={
-            <>
-              <InputAdornment position="end">
-                <Link to={`${location.pathname}/${eventType.id}/edit`}>
-                  <EditIcon />
-                </Link>
-              </InputAdornment>
-              <InputAdornment position="end">
-                <DeleteIcon />
-              </InputAdornment>
-            </>
+            <InputAdornment position="end" onClick={() => handleDelete(eventType.id)}>
+              <DeleteIcon />
+            </InputAdornment>
           }
         />
       </ListItem>
