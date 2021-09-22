@@ -1,12 +1,11 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
-import AdminEventTypes from '../containers/AdminEventTypesContainer/AdminEventTypesContainer';
+import AdminEventTypesContainer from '../containers/AdminEventTypesContainer/AdminEventTypesContainer';
 
 export const adminRoutes = [
   {
     path: '/dashboard/:userId/event-types',
     exact: true,
-    sidebar: () => <AdminEventTypes />
+    sidebar: () => <AdminEventTypesContainer />
   },
   {
     path: '/dashboard/:userId/events',

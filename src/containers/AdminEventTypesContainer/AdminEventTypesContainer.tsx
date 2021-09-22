@@ -25,22 +25,20 @@ const AdminEventTypesContainer = (): JSX.Element => {
   }, []);
 
   return (
-    <div>
-      <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
-        <AddEventType onAddEventType={handleAddEventType} />
-        <List>
-          {eventTypes &&
-            eventTypes.map((eventType) => (
-              <DisplayEventTypes
-                key={eventType.id}
-                eventType={eventType}
-                onDeleteEventType={handleDeleteEventType}
-              />
-            ))}
-        </List>
-        <Divider />
-      </Box>
-    </div>
+    <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
+      <AddEventType onAddEventType={handleAddEventType} />
+      <List>
+        {eventTypes &&
+          eventTypes.map((eventType) => (
+            <DisplayEventTypes
+              key={eventType.id}
+              eventType={eventType}
+              onDeleteEventType={handleDeleteEventType}
+            />
+          ))}
+      </List>
+      <Divider />
+    </Box>
   );
 };
 

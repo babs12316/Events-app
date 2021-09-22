@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Input, InputAdornment, ListItem } from '@mui/material';
+import { Box, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { EventType } from '../../services/eventsApi';
 
@@ -9,24 +8,22 @@ type AdminEventTypeProps = {
   onDeleteEventType: (id: number) => void;
 };
 
-const DisplayEventType = ({ eventType, onDeleteEventType }: AdminEventTypeProps): JSX.Element => {
+const DisplayEventTypes = ({ eventType, onDeleteEventType }: AdminEventTypeProps): JSX.Element => {
   const handleDelete = (eventTypeId: number) => {
     onDeleteEventType(eventTypeId);
   };
   return (
-    <div>
-      <ListItem key={eventType.id}>
-        <Input
-          defaultValue={eventType.name}
-          endAdornment={
-            <InputAdornment position="end" onClick={() => handleDelete(eventType.id)}>
-              <DeleteIcon />
-            </InputAdornment>
-          }
-        />
+    <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper', alignContent: 'center' }}>
+      <ListItem key={eventType.id} disablePadding>
+        <ListItemButton>
+          <ListItemText primary={eventType.name} />
+          <ListItemIcon onClick={() => handleDelete(eventType.id)}>
+            <DeleteIcon />
+          </ListItemIcon>
+        </ListItemButton>
       </ListItem>
-    </div>
+    </Box>
   );
 };
 
-export default DisplayEventType;
+export default DisplayEventTypes;
