@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Redirect, useParams } from 'react-router-dom';
 import AdminContainer from '../../containers/AdminContainer/AdminContainer';
 import { getUserRole } from '../../services/eventsApi';
 

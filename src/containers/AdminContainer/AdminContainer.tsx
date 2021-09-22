@@ -18,7 +18,7 @@ const AdminContainer = () => {
             <MenuList>
               <MenuItem sx={{ m: 2 }}>
                 <ListItemText>
-                  <Link to={`${location.pathname}`}>Event types</Link>
+                  <Link to={`${location.pathname}/event-types`}>Event types</Link>
                 </ListItemText>
               </MenuItem>
               <Divider />
@@ -39,6 +39,7 @@ const AdminContainer = () => {
           </Paper>
         </div>
         <div className={style.item2}>
+          <h3>Welcome Admin</h3>
           <Switch>
             {adminRoutes.map((route) => (
               <Route key={route.path} path={route.path} exact={route.exact}>

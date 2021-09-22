@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 import AdminEventTypes from '../containers/AdminEventTypesContainer/AdminEventTypesContainer';
 
 export const adminRoutes = [

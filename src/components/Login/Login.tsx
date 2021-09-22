@@ -71,7 +71,7 @@ const Login = (): JSX.Element => {
         {errorMsg && <FormHelperText sx={{ color: '#FF0000' }}>{errorMsg}</FormHelperText>}
         <FormHelperText id="my-helper-text">Valid user names are john_1 & james_2.</FormHelperText>
       </form>
-      {validUser && <Redirect to={`/dashboard/${loginData.id}/event-types`} />};
+      {validUser && <Redirect to={`/dashboard/${loginData.id}`} />};
     </>
   );
 };
