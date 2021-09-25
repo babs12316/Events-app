@@ -2,17 +2,18 @@ import React, { useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
-import { EventType, getEventTypes, getData } from '../../services/eventsApi';
+import { getData } from '../../services/eventsApi';
 import DisplayItems from '../../components/DisplayItems/DisplayItems';
 import AddItems from '../../components/AddItems/AddItems';
+import { Events } from '../../types/interface';
 
 type CrudContainerProps = {
   menu: string;
 };
 
 const CrudContainer = ({ menu }: CrudContainerProps): JSX.Element => {
-  const [eventTypes, setEventTypes] = useState<EventType[]>([]);
-  const [data, setData] = useState<any>([]);
+  type dataCrud = Events['eventType'][0] | Events['event'][0] | Events['user'][0];
+  const [data, setData] = useState<dataCrud[]>([]);
 
   const handleDelete = (itemId: number) => {
     const newData = data.filter((item: any) => item.id !== itemId);
@@ -25,12 +26,9 @@ const CrudContainer = ({ menu }: CrudContainerProps): JSX.Element => {
   };
 
   useEffect(() => {
-    getData(menu).then((data) => {
+    getData(menu).then((data: any) => {
       console.log(data);
       setData(data);
-    });
-    getEventTypes().then((data) => {
-      setEventTypes(data);
     });
   }, []);
 

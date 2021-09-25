@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FormControl, InputLabel, Input, FormHelperText, Button, Box } from '@mui/material';
+import { FormControl, InputLabel, Input, Button, Box } from '@mui/material';
 
 type AddItemsProps = {
   onAddItem: (item: string) => void;

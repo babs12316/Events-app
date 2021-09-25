@@ -24,7 +24,7 @@ export const getEventTypes = async (): Promise<EventType[]> => {
   return result.data.eventType;
 };
 
-export const getData = async (menu: string): Promise<any> => {
+export const getData = async (menu: string): Promise<Events> => {
   const result = await axios.get(`${baseUrl}`);
 
   switch (menu) {
