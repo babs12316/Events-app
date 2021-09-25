@@ -1,17 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import {
-  Redirect,
-  useParams,
-  Link,
-  useLocation,
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from 'react-router-dom';
-import AdminContainer from '../../containers/AdminContainer/AdminContainer';
+import { useParams, BrowserRouter as Router } from 'react-router-dom';
+import { adminSideNav } from '../../Constants';
 import { getUserRole } from '../../services/eventsApi';
 import Admin from '../Admin/Admin';
-import AdminSideNav from '../AdminSideNav/AdminSideNav';
+import SideNav from '../SideNav/SideNav';
 import style from './Dashboard.module.css';
 
 const Dashboard = (): JSX.Element => {
@@ -29,7 +21,7 @@ const Dashboard = (): JSX.Element => {
       <div className={style.container}>
         <Router>
           <div className={style.item1}>
-            <AdminSideNav userId={userId} />
+            <SideNav userId={userId} sideNav={adminSideNav} />
           </div>
           <div className={style.item2}>
             <Admin />
@@ -37,7 +29,6 @@ const Dashboard = (): JSX.Element => {
         </Router>
       </div>
     );
-    //  return <AdminContainer />;
   }
   return <div> User</div>;
 };
