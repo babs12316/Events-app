@@ -1,19 +1,19 @@
 import React from 'react';
-import AdminEventTypesContainer from '../containers/AdminEventTypesContainer/AdminEventTypesContainer';
+import CrudContainer from '../containers/CrudContainer/CrudContainer';
 
 export const adminRoutes = [
   {
     path: '/dashboard/:userId/event-types',
     exact: true,
-    sidebar: () => <AdminEventTypesContainer />
+    sidebar: () => <CrudContainer menu="eventType" />
   },
   {
     path: '/dashboard/:userId/events',
-    sidebar: () => <div>EventsComponent</div>
+    sidebar: () => <CrudContainer menu="event" />
   },
   {
     path: '/dashboard/:userId/users',
-    sidebar: () => <div>UsersComponents</div>
+    sidebar: () => <CrudContainer menu="user" />
   }
 ];
 

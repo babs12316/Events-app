@@ -17,14 +17,14 @@ const SideNav = ({ userId, sideNav }: SideNavProps): JSX.Element => {
       <Paper sx={{ m: 5 }}>
         <MenuList>
           {sideNav.map((item) => (
-            <>
+            <div key={item.itemPath}>
               <MenuItem sx={{ m: 2 }}>
                 <ListItemText>
                   <Link to={`/dashboard/${userId}/${item.itemPath}`}>{item.itemName}</Link>
                 </ListItemText>
               </MenuItem>
               <Divider />
-            </>
+            </div>
           ))}
         </MenuList>
       </Paper>

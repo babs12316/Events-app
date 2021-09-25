@@ -1,7 +1,7 @@
 import adminRoutes from '../routes/AdminRoutes';
 
 export type LoginCredentials = {
-  id?: string;
+  userId?: string;
   password?: string;
 };
 

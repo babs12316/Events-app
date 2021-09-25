@@ -73,8 +73,8 @@
    ],
 
   "user":[{
-          
-     "id":"john_1",
+     "id":1,     
+     "userId":"john_1",
       "name": "john",
      "surName": "wick",
       "email": "jj@ww.com",
@@ -84,8 +84,8 @@
    },
 
   {
-          
-     "id":"james_2",
+     "id":2,     
+     "userId":"james_2",
       "name": "james",
      "surName": "smith",
       "email": "tt@tt.com",

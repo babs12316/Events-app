@@ -12,9 +12,10 @@ const Login = (): JSX.Element => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (loginData.id) {
-      getUser(loginData.id)
+    if (loginData.userId) {
+      getUser(loginData.userId)
         .then((data) => {
+          console.log(`login data is${JSON.stringify(data)}`);
           if (data) {
             if (data.password === loginData.password) {
               setValidUser(true);
@@ -41,7 +42,7 @@ const Login = (): JSX.Element => {
               aria-describedby="my-helper-text"
               required
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                setLoginData((loginData) => ({ ...loginData, id: e.target.value }))
+                setLoginData((loginData) => ({ ...loginData, userId: e.target.value }))
               }
             />
           </FormControl>
@@ -71,7 +72,7 @@ const Login = (): JSX.Element => {
         {errorMsg && <FormHelperText sx={{ color: '#FF0000' }}>{errorMsg}</FormHelperText>}
         <FormHelperText id="my-helper-text">Valid user names are john_1 & james_2.</FormHelperText>
       </form>
-      {validUser && <Redirect to={`/dashboard/${loginData.id}`} />};
+      {validUser && <Redirect to={`/dashboard/${loginData.userId}`} />};
     </>
   );
 };

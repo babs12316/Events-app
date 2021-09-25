@@ -20,7 +20,8 @@ export interface Events {
 
   user: [
     {
-      id: string;
+      id: number;
+      userId: string;
       name: string;
       surName: string;
       email: string;
