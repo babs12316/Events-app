@@ -5,7 +5,7 @@ import MenuList from '@mui/material/MenuList';
 import MenuItem from '@mui/material/MenuItem';
 import ListItemText from '@mui/material/ListItemText';
 import { Link } from 'react-router-dom';
-import { SideNavItem } from '../../types/type';
+import { SideNavItem } from '../../../types/type';
 
 type SideNavProps = {
   userId: string;

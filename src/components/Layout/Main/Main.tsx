@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { MainRoutes } from '../../types/type';
+import { MainRoutes } from '../../../types/type';
 
 type MainProps = {
   routes: MainRoutes;

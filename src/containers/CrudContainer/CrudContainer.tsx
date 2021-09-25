@@ -3,8 +3,8 @@ import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import { getData } from '../../services/eventsApi';
-import DisplayItems from '../../components/DisplayItems/DisplayItems';
-import AddItems from '../../components/AddItems/AddItems';
+import DisplayItems from '../../components/Admin/DisplayItems/DisplayItems';
+import AddItems from '../../components/Admin/AddItems/AddItems';
 import { Events } from '../../types/interface';
 
 type CrudContainerProps = {
@@ -27,7 +27,6 @@ const CrudContainer = ({ menu }: CrudContainerProps): JSX.Element => {
 
   useEffect(() => {
     getData(menu).then((data: any) => {
-      console.log(data);
       setData(data);
     });
   }, []);
@@ -37,7 +36,10 @@ const CrudContainer = ({ menu }: CrudContainerProps): JSX.Element => {
       <AddItems onAddItem={handleAddItem} />
 
       <List>
-        {data && data.map((item: any) => <DisplayItems item={item} onDeleteItem={handleDelete} />)}
+        {data &&
+          data.map((item: any) => (
+            <DisplayItems key={item.id} item={item} onDeleteItem={handleDelete} />
+          ))}
       </List>
       <Divider />
     </Box>

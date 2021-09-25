@@ -4,8 +4,8 @@ import { adminSideNav, userSideNav } from '../../Constants';
 import { adminRoutes } from '../../routes/AdminRoutes';
 import { userRoutes } from '../../routes/UserRoutes';
 import { getUserRole } from '../../services/eventsApi';
-import Main from '../Main/Main';
-import SideNav from '../SideNav/SideNav';
+import Main from '../Layout/Main/Main';
+import SideNav from '../Layout/SideNav/SideNav';
 import style from './Dashboard.module.css';
 
 const Dashboard = (): JSX.Element => {
