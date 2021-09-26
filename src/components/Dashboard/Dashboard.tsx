@@ -25,7 +25,7 @@ const Dashboard = (): JSX.Element => {
           <SideNav userId={userId} sideNav={role === 'admin' ? adminSideNav : userSideNav} />
         </div>
         <div className={style.item2}>
-          <Main routes={role === 'admin' ? adminRoutes : userRoutes} />
+          <Main userId={userId} routes={role === 'admin' ? adminRoutes : userRoutes} />
         </div>
       </Router>
     </div>

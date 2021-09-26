@@ -1,15 +1,15 @@
+type EventType = {
+  id: number;
+  name: string;
+};
+
 export interface Events {
-  eventType: [
-    {
-      id: number;
-      name: string;
-    }
-  ];
+  eventType: EventType[];
   event: [
     {
       id: number;
       eventTypeId: number;
-      userId: number[];
+      userId: string[];
       name: string;
       description: string;
       start: string;

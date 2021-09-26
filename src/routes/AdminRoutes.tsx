@@ -1,5 +1,5 @@
 import React from 'react';
-import CrudContainer from '../containers/CrudContainer/CrudContainer';
+import CrudContainer from '../components/Admin/CrudContainer/CrudContainer';
 
 export const adminRoutes = [
   {
@@ -9,10 +9,12 @@ export const adminRoutes = [
   },
   {
     path: '/dashboard/:userId/events',
+    exact: true,
     sidebar: () => <CrudContainer menu="event" />
   },
   {
     path: '/dashboard/:userId/users',
+    exact: true,
     sidebar: () => <CrudContainer menu="user" />
   }
 ];

@@ -4,12 +4,13 @@ import { MainRoutes } from '../../../types/type';
 
 type MainProps = {
   routes: MainRoutes;
+  userId: string;
 };
 
-const Main = ({ routes }: MainProps): JSX.Element => {
+const Main = ({ routes, userId }: MainProps): JSX.Element => {
   return (
     <>
-      <h3>Welcome Admin</h3>
+      <h3>Welcome {userId}</h3>
 
       <Switch>
         {routes.map((route) => (

@@ -1,4 +1,5 @@
 import adminRoutes from '../routes/AdminRoutes';
+import { Events } from './interface';
 
 export type LoginCredentials = {
   userId?: string;

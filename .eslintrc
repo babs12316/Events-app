@@ -35,6 +35,14 @@
       "import/no-extraneous-dependencies":"off",
       "no-shadow":"off",
       "import/no-named-as-default": 0,
+      "import/no-cycle":[
+        "error",
+        {
+          "maxDepth": 1,
+          "ignoreExternal": true
+        }
+
+      ],
       "prettier/prettier": [
         "error",
         {

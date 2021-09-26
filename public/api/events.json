@@ -22,8 +22,8 @@
          "id":1,
          "eventTypeId":1,
          "userId":[
-            1,
-            2
+            "john_1",
+            "john_2"
          ],
       "name":"Test match at Frankfurt",
          "description":"its a 5 days match!",
@@ -35,8 +35,8 @@
          "id":2,
          "eventTypeId":2,
          "userId":[
-            1,
-            2
+            "john_1",
+            "john_2"
          ],
       "name":"Eurocup match at Frankfurt",
          "description":"its a 90 min match!",
@@ -48,8 +48,8 @@
          "id":3,
          "eventTypeId":3,
          "userId":[
-            1,
-            2
+            "john_3",
+            "john_4"
          ],
       "name":"SuperHero movie",
          "description":"its a marvel movie!",
@@ -61,8 +61,8 @@
          "id":4,
          "eventTypeId":4,
          "userId":[
-            1,
-            2
+            "john_1",
+            "john_2"
          ],
       "name":"Yoga session",
          "description":"its a energy booster session!",
