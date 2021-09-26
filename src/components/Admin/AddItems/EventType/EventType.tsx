@@ -11,7 +11,7 @@ const EventType = () => {
   const handleClick = () => {
     const newEventType: EventType[] = [...events.eventType, eventType];
     const newEvents: Events = { ...events, eventType: newEventType };
-     setEvents(newEvents);
+    setEvents(newEvents);
   };
 
   return (

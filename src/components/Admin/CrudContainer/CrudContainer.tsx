@@ -60,7 +60,24 @@ const CrudContainer = ({ menu }: CrudContainerProps): JSX.Element => {
 
       <List>
         {events &&
+          menu === 'eventType' &&
           events.eventType.map((item: any) => (
+            <div key={item.id} className={style.crudContainer}>
+              <DisplayItems item={item} />
+              <DeleteItems onDeleteItem={() => handleDelete(item.id)} />
+            </div>
+          ))}
+        {events &&
+          menu === 'event' &&
+          events.event.map((item: any) => (
+            <div key={item.id} className={style.crudContainer}>
+              <DisplayItems item={item} />
+              <DeleteItems onDeleteItem={() => handleDelete(item.id)} />
+            </div>
+          ))}
+        {events &&
+          menu === 'user' &&
+          events.user.map((item: any) => (
             <div key={item.id} className={style.crudContainer}>
               <DisplayItems item={item} />
               <DeleteItems onDeleteItem={() => handleDelete(item.id)} />

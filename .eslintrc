@@ -35,6 +35,7 @@
       "import/no-extraneous-dependencies":"off",
       "no-shadow":"off",
       "import/no-named-as-default": 0,
+      "no-nested-ternary":"off",
       "import/no-cycle":[
         "error",
         {
