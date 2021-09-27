@@ -8,9 +8,10 @@ type EventType = Events['eventType'][0];
 const EventType = () => {
   const [eventType, setEventType] = useState<EventType>({} as EventType);
   const { events, setEvents } = useGlobalContext();
-  const handleClick = () => {
-    const newEventType: EventType[] = [...events.eventType, eventType];
-    const newEvents: Events = { ...events, eventType: newEventType };
+  const handleClick = (eventType: EventType) => {
+    const newEventType = { ...eventType, id: Math.random() * 1000 };
+    const updatedEventType: EventType[] = [...events.eventType, newEventType];
+    const newEvents: Events = { ...events, eventType: updatedEventType };
     setEvents(newEvents);
   };
 
@@ -22,12 +23,12 @@ const EventType = () => {
           id="item-input"
           required
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-            setEventType({ id: events.eventType.length + 1, name: e.target.value })
+            setEventType({ ...eventType, name: e.target.value })
           }
         />
       </FormControl>
       <Box sx={{ m: 2 }}>
-        <Button onClick={handleClick} variant="contained">
+        <Button onClick={() => handleClick(eventType)} variant="contained">
           Add
         </Button>
       </Box>

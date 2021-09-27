@@ -18,7 +18,7 @@ const User = () => {
   const [user, setUser] = useState<User>({} as User);
   const { events, setEvents } = useGlobalContext();
   const handleClick = (user: User) => {
-    const newUser = { ...user, id: events.user.length + 1 };
+    const newUser = { ...user, id: Math.random() * 1000 };
     const updatedUsers: User[] = [...events.user, newUser];
     const newEvents: Events = { ...events, user: updatedUsers };
     setEvents(newEvents);
