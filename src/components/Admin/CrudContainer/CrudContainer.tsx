@@ -4,7 +4,7 @@ import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import { getData } from '../../../services/eventsApi';
 import DisplayItems from '../DisplayItems/DisplayItems';
-import AddItems, { AddFields } from '../AddItems/AddItems';
+import AddItems from '../AddItems/AddItems';
 import { Events } from '../../../types/interface';
 import DeleteItems from '../DeleteItems/DeleteItems';
 import style from './CrudContainer.module.css';
@@ -25,16 +25,9 @@ const CrudContainer = ({ menu }: CrudContainerProps): JSX.Element => {
     setData(newData);
   };
 
-  const handleAddItem = (item: AddFields) => {
-    const newItem = item;
-    newItem.id = Math.floor(Math.random() * 100);
-    const newData = [...data, newItem];
-    setData(newData);
-  };
-
   return (
     <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
-      <AddItems onAddItem={handleAddItem} menu={menu} />
+      <AddItems menu={menu} />
 
       <List>
         {events &&

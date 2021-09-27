@@ -3,6 +3,16 @@ type EventType = {
   name: string;
 };
 
+type User = {
+  id: number;
+  userId: string;
+  name: string;
+  surName: string;
+  email: string;
+  password: string;
+  role: string;
+};
+
 export interface Events {
   eventType: EventType[];
   event: [
@@ -18,15 +28,5 @@ export interface Events {
     }
   ];
 
-  user: [
-    {
-      id: number;
-      userId: string;
-      name: string;
-      surName: string;
-      email: string;
-      password: string;
-      role: string;
-    }
-  ];
+  user: User[];
 }
