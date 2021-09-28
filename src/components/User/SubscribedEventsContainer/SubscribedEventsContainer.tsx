@@ -8,14 +8,10 @@ import { useGlobalContext } from '../../../Context/EventsContext';
 import SubscribedEvent from '../SubscribedEvent/SubscribedEvent';
 import { Event } from '../../../types/type';
 
-type SubScribedEventsContainerProps = {
-  test: string;
-};
-
-const SubScribedEventsContainer = ({ test }: SubScribedEventsContainerProps): JSX.Element => {
+const SubScribedEventsContainer = (): JSX.Element => {
   const { events, setEvents } = useGlobalContext();
   const location = useLocation();
-  const [value, setValue] = React.useState('one');
+  const [value, setValue] = React.useState('1');
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);

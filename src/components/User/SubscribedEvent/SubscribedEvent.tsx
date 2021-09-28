@@ -6,7 +6,7 @@ type EventsProps = {
   subScribedEvent: Event;
 };
 
-const SubscribedEvent = ({ subScribedEvent }: EventsProps) => {
+const SubscribedEvent = ({ subScribedEvent }: EventsProps): JSX.Element => {
   return (
     <>
       {subScribedEvent.status && <TabPanel value="1">{subScribedEvent.name}</TabPanel>}

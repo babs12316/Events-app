@@ -6,8 +6,6 @@ export const adminSideNav = [
 ];
 
 export const userSideNav = [
-  { itemName: 'Subscribe to Event', itemPath: 'user-subscribed-events' },
-  { itemName: 'User events', itemPath: 'user-events' },
-  { itemName: 'Profile', itemPath: 'user-profile' },
-  { itemName: 'Event types', itemPath: 'user-event-types' }
+  { itemName: 'Subscribed events', itemPath: 'user-subscribed-events' },
+  { itemName: 'Add subscription', itemPath: 'add-subscribed-events' }
 ];

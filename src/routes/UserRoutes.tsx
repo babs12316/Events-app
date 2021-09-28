@@ -1,22 +1,18 @@
 import React from 'react';
+import AddSubscriptionContainer from '../components/User/AddSubscriptionContainer/AddSubscriptionContainer';
 import SubScribedEventsContainer from '../components/User/SubscribedEventsContainer/SubscribedEventsContainer';
 
-const test = 'hello';
 export const userRoutes = [
   {
     path: '/dashboard/:userId/user-subscribed-events',
     exact: true,
-    sidebar: () => <SubScribedEventsContainer test={test} />
+    sidebar: () => <SubScribedEventsContainer />
   },
+
   {
-    path: '/dashboard/:userId/user-profile',
+    path: '/dashboard/:userId/add-subscribed-events',
     exact: true,
-    sidebar: () => <div>User profile</div>
-  },
-  {
-    path: '/dashboard/:userId/user-event-types',
-    exact: true,
-    sidebar: () => <div>User events</div>
+    sidebar: () => <AddSubscriptionContainer />
   }
 ];
 

@@ -13,20 +13,19 @@ type User = {
   role: string;
 };
 
+type Event = {
+  id: number;
+  eventTypeId: number;
+  userId: string[];
+  name: string;
+  description: string;
+  start: string;
+  end: string;
+  status: boolean;
+};
+
 export interface Events {
   eventType: EventType[];
-  event: [
-    {
-      id: number;
-      eventTypeId: number;
-      userId: string[];
-      name: string;
-      description: string;
-      start: string;
-      end: string;
-      status: boolean;
-    }
-  ];
-
+  event: Event[];
   user: User[];
 }
