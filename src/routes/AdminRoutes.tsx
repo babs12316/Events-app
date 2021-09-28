@@ -7,11 +7,7 @@ export const adminRoutes = [
     exact: true,
     sidebar: () => <CrudContainer menu="eventType" />
   },
-  {
-    path: '/dashboard/:userId/events',
-    exact: true,
-    sidebar: () => <CrudContainer menu="event" />
-  },
+
   {
     path: '/dashboard/:userId/users',
     exact: true,

@@ -11,10 +11,9 @@ import {
 import React, { useState } from 'react';
 import { useGlobalContext } from '../../../../Context/EventsContext';
 import { Events } from '../../../../types/interface';
+import { User } from '../../../../types/type';
 
-type User = Events['user'][0];
-
-const User = () => {
+const AddUser = () => {
   const [user, setUser] = useState<User>({} as User);
   const { events, setEvents } = useGlobalContext();
   const handleClick = (user: User) => {
@@ -114,4 +113,4 @@ const User = () => {
   );
 };
 
-export default User;
+export default AddUser;

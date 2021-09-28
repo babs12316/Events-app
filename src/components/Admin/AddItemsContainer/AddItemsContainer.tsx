@@ -1,6 +1,6 @@
 import React from 'react';
-import EventType from './EventType/EventType';
-import User from './User/User';
+import AddEventType from './AddEventType/AddEventType';
+import AddUser from './AddUser/AddUser';
 
 type AddItemsProps = {
   menu: string;
@@ -9,9 +9,9 @@ type AddItemsProps = {
 const AddItemsContainer = ({ menu }: AddItemsProps) => {
   switch (menu) {
     case 'eventType':
-      return <EventType />;
+      return <AddEventType />;
     case 'user':
-      return <User />;
+      return <AddUser />;
     default:
       return <div>Add Component </div>;
   }

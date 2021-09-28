@@ -21,11 +21,6 @@ const DisplayUser = (): JSX.Element => {
     <div>
       {events.user.map((item) => (
         <Box>
-          <ListItem key={item.id} disablePadding>
-            <ListItemButton>
-              <ListItemText primary={item.name} />
-            </ListItemButton>
-          </ListItem>
           <ListItem key={item.id}>
             <Card sx={{ width: 400 }}>
               <CardContent>

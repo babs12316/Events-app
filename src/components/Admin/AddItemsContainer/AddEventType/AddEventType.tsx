@@ -2,10 +2,9 @@ import { Box, Button, FormControl, Input, InputLabel } from '@mui/material';
 import React, { useState } from 'react';
 import { useGlobalContext } from '../../../../Context/EventsContext';
 import { Events } from '../../../../types/interface';
+import { EventType } from '../../../../types/type';
 
-type EventType = Events['eventType'][0];
-
-const EventType = () => {
+const AddEventType = () => {
   const [eventType, setEventType] = useState<EventType>({} as EventType);
   const { events, setEvents } = useGlobalContext();
   const handleClick = (eventType: EventType) => {
@@ -36,4 +35,4 @@ const EventType = () => {
   );
 };
 
-export default EventType;
+export default AddEventType;
