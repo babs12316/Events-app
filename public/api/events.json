@@ -23,20 +23,22 @@
          "eventTypeId":1,
          "userId":[
             "john_1",
-            "john_2"
+            "john_2",
+            "james_2"
          ],
       "name":"Test match at Frankfurt",
          "description":"its a 5 days match!",
          "start":"09 December 2020 08:00 UTC",
          "end":"14 December 2020 18:00 UTC",
-         "status":false
+         "status":true
       },
       {
          "id":2,
          "eventTypeId":2,
          "userId":[
             "john_1",
-            "john_2"
+            "john_2",
+            "james_2"
          ],
       "name":"Eurocup match at Frankfurt",
          "description":"its a 90 min match!",
