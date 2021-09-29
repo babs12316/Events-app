@@ -1,8 +1,8 @@
 ### `Login details`
 
-Login detail for user\
-userId: john_1 password: test\
-userId: james_2  password: test\
+Login detail for user<br/>
+userId: john_1 password: test<br/>
+userId: james_2  password: test<br/>
 
 ## Tech stack
 
