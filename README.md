@@ -9,7 +9,7 @@ userId: james_2  password: test<br/>
 Project is build using create react app with typescript template.<br/>
 Material UI is used as UI library.<br/>
 Axios library is used for fetching api.<br/>
-Eslint is used as a linter.<br/>
+airtbnb-eslint is used as a linter.<br/>
 Testing is done using React test library <br/>
 
 ## Project config
