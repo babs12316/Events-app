@@ -4,7 +4,7 @@ import { MemoryRouter } from "react-router-dom";
 import AddEventType from './AddEventType';
 
 describe('<AddEventType/>', () => {
-  test('renders add button & text input', () =>
+  test('renders add button ', () =>
    {
     
     render(
@@ -13,7 +13,6 @@ describe('<AddEventType/>', () => {
      </MemoryRouter>
     );
    expect(screen.getByRole('button')).toHaveTextContent('Add');
-   expect(screen.getByRole('input'));
   });
 
 });
