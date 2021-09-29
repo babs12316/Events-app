@@ -15,7 +15,6 @@ const Login = (): JSX.Element => {
     if (loginData.userId) {
       getUser(loginData.userId)
         .then((data) => {
-          console.log(`login data is${JSON.stringify(data)}`);
           if (data) {
             if (data.password === loginData.password) {
               setValidUser(true);
@@ -38,6 +37,7 @@ const Login = (): JSX.Element => {
           <FormControl>
             <InputLabel htmlFor="userName-input">User Name</InputLabel>
             <Input
+              data-testid="userId"
               id="userName-input"
               aria-describedby="my-helper-text"
               required
@@ -51,6 +51,7 @@ const Login = (): JSX.Element => {
           <FormControl>
             <InputLabel htmlFor="password-input">password</InputLabel>
             <Input
+              data-testid="password"
               id="password-input"
               type="password"
               required
@@ -62,7 +63,7 @@ const Login = (): JSX.Element => {
         </Box>
 
         <Box sx={{ '& button': { m: 2 } }}>
-          <FormControl>
+          <FormControl data-testid="login">
             <Button type="submit" variant="contained">
               Login
             </Button>

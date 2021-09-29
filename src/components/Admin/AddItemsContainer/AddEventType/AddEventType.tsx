@@ -15,7 +15,7 @@ const AddEventType = () => {
   };
 
   return (
-    <div>
+    <>
       <FormControl>
         <InputLabel htmlFor="item-input">Enter Item</InputLabel>
         <Input
@@ -31,7 +31,7 @@ const AddEventType = () => {
           Add
         </Button>
       </Box>
-    </div>
+    </>
   );
 };
 
