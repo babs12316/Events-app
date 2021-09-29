@@ -1,18 +1,15 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from "react-router-dom";
+import { MemoryRouter } from 'react-router-dom';
 import AddEventType from './AddEventType';
 
 describe('<AddEventType/>', () => {
-  test('renders add button ', () =>
-   {
-    
+  test('renders add button', () => {
     render(
-        <MemoryRouter>
-     <AddEventType/>
-     </MemoryRouter>
+      <MemoryRouter>
+        <AddEventType />
+      </MemoryRouter>
     );
-   expect(screen.getByRole('button')).toHaveTextContent('Add');
+    expect(screen.getByRole('button')).toHaveTextContent('Add');
   });
-
 });

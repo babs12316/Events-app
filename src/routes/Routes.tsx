@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-cycle
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Dashboard from '../components/Dashboard/Dashboard';
