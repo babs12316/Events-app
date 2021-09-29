@@ -6,19 +6,19 @@ userId: james_2  password: test<br/>
 
 ## Tech stack
 
-Project is build using create react app with typescript template. \
-Material UI is used as UI library.\
-Testing is done using React test library \
+Project is build using create react app with typescript template.<br/>
+Material UI is used as UI library.<br/>
+Testing is done using React test library <br/>
 
 ## Project config
 
-Intially user will be redirected to login page.\
-After user is logged in user will be redirected to dashboard component\
-On Dashboard component user role is checked\
-Depending on users role, different components are loaded in sidenav and main component of layout\
-Context api is used, to pass global Event Object which can read and modified by component easily\
-Testing is focused on checking if UI elements are rendered as expected\
-Project is divided in multiple folders, making it simple and extending it easy.\
+Intially user will be redirected to login page.<br/>
+After user is logged in user will be redirected to dashboard component<br/>
+On Dashboard component user role is checked<br/>
+Depending on users role, different components are loaded in sidenav and main component of layout<br/>
+Context api is used, to pass global Event Object which can read and modified by component easily<br/>
+Testing is focused on checking if UI elements are rendered as expected<br/>
+Project is divided in multiple folders, making it simple and extending it easy.<br/>
 
 
 ## Available Scripts
