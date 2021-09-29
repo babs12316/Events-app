@@ -10,7 +10,7 @@ import { Event } from '../../../types/type';
 import getLoggedInUserId from '../../../utils/getLoggedInuser';
 
 const SubScribedEventsContainer = (): JSX.Element => {
-  const { events, setEvents } = useGlobalContext();
+  const { events } = useGlobalContext();
   const location = useLocation();
   const [value, setValue] = React.useState('1');
 

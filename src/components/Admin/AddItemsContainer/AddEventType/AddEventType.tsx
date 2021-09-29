@@ -4,7 +4,7 @@ import { useGlobalContext } from '../../../../Context/EventsContext';
 import { Events } from '../../../../types/interface';
 import { EventType } from '../../../../types/type';
 
-const AddEventType = () => {
+const AddEventType = (): JSX.Element => {
   const [eventType, setEventType] = useState<EventType>({} as EventType);
   const { events, setEvents } = useGlobalContext();
   const handleClick = (eventType: EventType) => {

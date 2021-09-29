@@ -5,15 +5,14 @@ import Snackbar from '@mui/material/Snackbar';
 import { useLocation } from 'react-router';
 import { useGlobalContext } from '../../../../Context/EventsContext';
 import { Event } from '../../../../types/type';
-import { Events } from '../../../../types/interface';
 import getLoggedInUserId from '../../../../utils/getLoggedInuser';
 
 type AddSubscriptionProps = {
   event: Event;
 };
 
-const AddSubscription = ({ event }: AddSubscriptionProps) => {
-  const { events, setEvents } = useGlobalContext();
+const AddSubscription = ({ event }: AddSubscriptionProps): JSX.Element => {
+  const { events } = useGlobalContext();
   const [open, setOpen] = React.useState(false);
   const location = useLocation();
   const handleClick = (event: Event) => {
@@ -26,6 +25,7 @@ const AddSubscription = ({ event }: AddSubscriptionProps) => {
 
     setOpen(true);
   };
+
   const handleClose = (event: React.SyntheticEvent | React.MouseEvent, reason?: string) => {
     if (reason === 'clickaway') {
       return;

@@ -13,7 +13,7 @@ import { useGlobalContext } from '../../../../Context/EventsContext';
 import { Events } from '../../../../types/interface';
 import { User } from '../../../../types/type';
 
-const AddUser = () => {
+const AddUser = (): JSX.Element => {
   const [user, setUser] = useState<User>({} as User);
   const { events, setEvents } = useGlobalContext();
   const handleClick = (user: User) => {
@@ -105,7 +105,12 @@ const AddUser = () => {
       </Box>
 
       <Box sx={{ m: 2 }}>
-        <Button type="submit" onClick={() => handleClick(user!)} variant="contained">
+        <Button
+          type="submit"
+          // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
+          onClick={() => handleClick(user!)}
+          variant="contained"
+        >
           Add
         </Button>
       </Box>
