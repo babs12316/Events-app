@@ -6,7 +6,7 @@ import AddSubscription from './AddSubscription/AddSubscription';
 
 const AddSubscriptionContainer = () => {
   const location = useLocation();
-  const { events, setEvents } = useGlobalContext();
+  const { events } = useGlobalContext();
 
   return (
     <div>
