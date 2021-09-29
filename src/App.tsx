@@ -10,7 +10,7 @@ const App = (): JSX.Element => {
   const [events, setEvents] = useState<Events>({} as Events);
 
   useEffect(() => {
-    getEvents().then((data: any) => {
+    getEvents().then((data: Events) => {
       setEvents(data);
     });
   }, []);

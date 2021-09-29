@@ -6,7 +6,7 @@ type AddItemsProps = {
   menu: string;
 };
 
-const AddItemsContainer = ({ menu }: AddItemsProps) => {
+const AddItemsContainer = ({ menu }: AddItemsProps): JSX.Element => {
   switch (menu) {
     case 'eventType':
       return <AddEventType />;
