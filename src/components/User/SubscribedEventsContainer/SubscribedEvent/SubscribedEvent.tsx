@@ -1,6 +1,6 @@
 import React from 'react';
 import TabPanel from '@mui/lab/TabPanel';
-import { Event } from '../../../types/type';
+import { Event } from '../../../../types/type';
 
 type EventsProps = {
   subScribedEvent: Event;

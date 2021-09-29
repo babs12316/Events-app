@@ -5,8 +5,9 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import { useLocation } from 'react-router';
 import { useGlobalContext } from '../../../Context/EventsContext';
-import SubscribedEvent from '../SubscribedEvent/SubscribedEvent';
+import SubscribedEvent from './SubscribedEvent/SubscribedEvent';
 import { Event } from '../../../types/type';
+import getLoggedInUserId from '../../../utils/getLoggedInuser';
 
 const SubScribedEventsContainer = (): JSX.Element => {
   const { events, setEvents } = useGlobalContext();
@@ -28,7 +29,7 @@ const SubScribedEventsContainer = (): JSX.Element => {
             </TabList>
           </Box>
           {events.event
-            .filter((event: Event) => event.userId.includes(location.pathname.split('/')[2]))
+            .filter((event: Event) => event.userId.includes(getLoggedInUserId(location.pathname)))
             .map((item: Event) => (
               <SubscribedEvent key={item.id} subScribedEvent={item} />
             ))}

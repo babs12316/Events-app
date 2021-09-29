@@ -1,9 +1,9 @@
-type EventType = {
+interface EventType {
   id: number;
   name: string;
-};
+}
 
-type User = {
+interface User {
   id: number;
   userId: string;
   name: string;
@@ -11,9 +11,9 @@ type User = {
   email: string;
   password: string;
   role: string;
-};
+}
 
-type Event = {
+interface Event {
   id: number;
   eventTypeId: number;
   userId: string[];
@@ -22,7 +22,7 @@ type Event = {
   start: string;
   end: string;
   status: boolean;
-};
+}
 
 export interface Events {
   eventType: EventType[];

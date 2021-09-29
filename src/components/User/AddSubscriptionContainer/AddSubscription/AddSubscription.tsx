@@ -3,9 +3,10 @@ import React from 'react';
 import AddIcon from '@mui/icons-material/Add';
 import Snackbar from '@mui/material/Snackbar';
 import { useLocation } from 'react-router';
-import { useGlobalContext } from '../../../Context/EventsContext';
-import { Event } from '../../../types/type';
-import { Events } from '../../../types/interface';
+import { useGlobalContext } from '../../../../Context/EventsContext';
+import { Event } from '../../../../types/type';
+import { Events } from '../../../../types/interface';
+import getLoggedInUserId from '../../../../utils/getLoggedInuser';
 
 type AddSubscriptionProps = {
   event: Event;
@@ -20,7 +21,7 @@ const AddSubscription = ({ event }: AddSubscriptionProps) => {
     if (newEvent) {
       newEvent
         .find((item: Event) => item.id === event.id)
-        ?.userId.push(location.pathname.split('/')[2]);
+        ?.userId.push(getLoggedInUserId(location.pathname));
     }
 
     setOpen(true);
